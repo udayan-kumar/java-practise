@@ -1,4 +1,4 @@
-// print the first N numbers in the fibonacci sweies
+// print the first N numbers in the fibonacci series
 
 package loop;
 
@@ -11,16 +11,16 @@ public class question_14 {
         System.out.print("enter the number: ");
         int n = ud.nextInt();
         int num = 0;
-        int faccsum = 1;
+        int facc = 1;
+        int faccsum ;
+        int count=1;
 
-        for(int i = 0; i<=n; i++){
-            int facc = num+i;
-            int sum = facc + faccsum;
-            int finsum = sum +i;
-
-            faccsum = i;
-            
-            System.out.println(finsum);
+        while(count!=0){
+            faccsum = num +facc;
+            System.out.println(faccsum);
+            num = facc;
+            facc= count;
+            count++;
         }
     }
 }
