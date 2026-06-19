@@ -2,23 +2,27 @@
 
 package loop;
 
-import java.util.Scanner;
-import javax.sound.sampled.SourceDataLine;
+import java.util.*;
+
 
 public class question_15 {
     public static void main(String[] args) {
         Scanner ud = new Scanner(System.in);
 
-        int n = ud.nextInt();
-        int num = ud.nextInt();
+        int dividend = ud.nextInt();
+        int divisor = ud.nextInt();
+        
+        
+        // if(dividend % divisor == 0){
 
-        for(int i =1; i<=n; i++){
-            int rem = n%num;
-            int hcf = num%rem;
-            
-            num = hcf;
-            System.out.println(num);
+        // }
+
+        while(divisor != 0){
+            int value = divisor;
+            divisor = dividend % divisor;
+            dividend = value;
         }
+        System.out.println(dividend);
     }
 }
 
